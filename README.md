@@ -4,7 +4,7 @@ An example of how to build a simple API with:
 
 - API Gateway
 - Lambda
-- The serverless framework
+- [The serverless framework](https://www.serverless.com/)
 
 Using Node.js
 
@@ -29,10 +29,16 @@ npm install
 
 ## Test locally
 
-Run:
+To execute the function locally, you can run:
 
 ```bash
 node_modules/.bin/sls invoke local -f getNews
+```
+
+To run the unit tests, you can run:
+
+```bash
+npm test
 ```
 
 
@@ -64,4 +70,13 @@ To remove all the resources created by this project run:
 
 ```bash
 node_modules/.bin/sls remove
+```
+
+
+## Notes
+
+A quick way to scaffold a new Node.js project with Serverless framework is by using the following command:
+
+```bash
+node_modules/.bin/sls create --template aws-nodejs --path nameOfYourService
 ```

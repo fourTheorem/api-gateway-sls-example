@@ -4,7 +4,7 @@
   "description": "An example of how to build a simple API with API Gateway, Lambda and the serverless framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "uvu tests"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,9 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
-    "serverless": "^3.5.0"
+    "nock": "^13.2.4",
+    "serverless": "^3.5.0",
+    "uvu": "^0.5.3"
   },
   "dependencies": {
     "axios": "^0.26.0",
