@@ -56,3 +56,12 @@ curl https://xyz.execute-api.eu-west-1.amazonaws.com/dev/news | jq .
 To see the API in action.
 
 🎉
+
+
+## Cleanup
+
+To remove all the resources created by this project run:
+
+```bash
+node_modules/.bin/sls remove
+```
