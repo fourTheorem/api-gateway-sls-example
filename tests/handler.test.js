@@ -19,9 +19,14 @@ test('getNews', async () => {
 
   assert.ok(scope.isDone())
   assert.is(result.statusCode, 200)
+  assert.is(body.length, 88)
   assert.equal(body[0], {
     title: 'FIGHTING RAGES AS SANCTIONS HIT RUSSIA',
     link: 'https://www.nytimes.com/live/2022/02/28/world/ukraine-russia-war'
+  })
+  assert.equal(body[87], {
+    title: 'VertexConnect the dots to reveal the hidden picture.',
+    link: 'https://www.nytimes.com/puzzles/vertex'
   })
 })
 
