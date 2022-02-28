@@ -1,0 +1,32 @@
+{
+  "name": "api-gateway-sls-example",
+  "version": "1.0.0",
+  "description": "An example of how to build a simple API with API Gateway, Lambda and the serverless framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fourTheorem/api-gateway-sls-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fourTheorem/api-gateway-sls-example/issues"
+  },
+  "homepage": "https://github.com/fourTheorem/api-gateway-sls-example#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "serverless": "^3.5.0"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cheerio": "^1.0.0-rc.10"
+  }
+}

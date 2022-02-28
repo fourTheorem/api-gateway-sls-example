@@ -1,0 +1,15 @@
+service: newsApi
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  region: eu-west-1
+  runtime: nodejs14.x
+
+functions:
+  getNews:
+    handler: handler.getNews
+    events:
+      - http:
+          method: GET
+          path: news
