@@ -45,7 +45,7 @@ node_modules/.bin/sls deploy
 ```
 
 
-This should ouutput the url of the deployed API (something like: `https://xyz.execute-api.eu-west-1.amazonaws.com/dev/news`).
+This should output the url of the deployed API (something like: `https://xyz.execute-api.eu-west-1.amazonaws.com/dev/news`).
 
 You can then run:
 
