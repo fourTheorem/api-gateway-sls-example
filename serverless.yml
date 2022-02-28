@@ -1,6 +1,14 @@
 service: newsApi
 frameworkVersion: "3"
 
+plugins:
+  # https://www.serverless.com/plugins/serverless-add-api-key
+  - serverless-add-api-key
+
+custom:
+  apiKeys:
+    - name: sampleApiKey
+
 provider:
   name: aws
   region: eu-west-1
@@ -13,3 +21,4 @@ functions:
       - http:
           method: GET
           path: news
+          private: true

@@ -25,6 +25,7 @@
     "eslint-plugin-promise": "^5.2.0",
     "nock": "^13.2.4",
     "serverless": "^3.5.0",
+    "serverless-add-api-key": "^4.2.1",
     "uvu": "^0.5.3"
   },
   "dependencies": {

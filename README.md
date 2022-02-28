@@ -50,13 +50,15 @@ Run:
 node_modules/.bin/sls deploy
 ```
 
+The first deployment will take 2-3 minutes.
 
-This should output the url of the deployed API (something like: `https://xyz.execute-api.eu-west-1.amazonaws.com/dev/news`).
+
+This should output the url of the deployed API (something like: `https://xyz.execute-api.eu-west-1.amazonaws.com/dev/news`) and the API key (something like `abcdefghijklmnopqrstuvwxyz0123456789abcd`).
 
 You can then run:
 
 ```bash
-curl https://xyz.execute-api.eu-west-1.amazonaws.com/dev/news | jq .
+curl -H 'X-Api-Key: abcdefghijklmnopqrstuvwxyz0123456789abcd' https://xyz.execute-api.eu-west-1.amazonaws.com/dev/news | jq .
 ```
 
 To see the API in action.
