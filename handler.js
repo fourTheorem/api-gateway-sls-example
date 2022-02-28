@@ -13,7 +13,7 @@ module.exports.getNews = async function getNews (event) {
 
   // extrapolate the news using various cheerio utilities
   const news = []
-  $('a[data-story]').each((i, entry) => {
+  $('a[data-story^="nyt://"]').each((i, entry) => {
     news[i] = {
       title: $(entry).text().trim(),
       link: $(entry).attr('href').trim()

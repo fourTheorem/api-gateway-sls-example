@@ -10,15 +10,16 @@ test('getNews', async () => {
 
   // mocks the return from the http request for
   // consistent test results
-  nock('https://www.nytimes.com')
+  const scope = nock('https://www.nytimes.com')
     .get('/')
     .reply(200, mockHtml)
 
   const result = await getNews({})
   const body = JSON.parse(result.body)
 
+  assert.ok(scope.isDone())
   assert.is(result.statusCode, 200)
-  assert.equal(body[1], {
+  assert.equal(body[0], {
     title: 'FIGHTING RAGES AS SANCTIONS HIT RUSSIA',
     link: 'https://www.nytimes.com/live/2022/02/28/world/ukraine-russia-war'
   })
