@@ -1,9 +1,10 @@
-service: newsApi
+service: news-api
 frameworkVersion: "3"
 
 plugins:
   # https://www.serverless.com/plugins/serverless-add-api-key
   - serverless-add-api-key
+  - serverless-iam-roles-per-function
 
 custom:
   apiKeys:
@@ -22,3 +23,24 @@ functions:
           method: GET
           path: news
           private: true
+    environment:
+      BUCKET_NAME:
+        Ref: S3Data
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - s3:PutObject
+        Resource:
+          Fn::Join:
+            - ""
+            - - Fn::GetAtt: S3Data.Arn
+              - "/*"
+    dependsOn:
+      - S3Data
+
+resources:
+  Resources:
+    S3Data:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:service}-data
