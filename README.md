@@ -77,7 +77,7 @@ npx serverless remove
 
 ## Notes
 
-## Using S3
+### Using S3
 
 An example using S3 is currently available [in a Pull Request](https://github.com/fourTheorem/api-gateway-sls-example/pull/1) in this repo. Tests are to be updated to use an S3 Mock client.
 
