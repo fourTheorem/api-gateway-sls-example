@@ -3,7 +3,15 @@ const path = require('path')
 const { test } = require('uvu')
 const assert = require('uvu/assert')
 const nock = require('nock')
-const { getNews } = require('../handler')
+// makes sure we don't access S3 for real during the unit tests, but uses a mock instead
+process.env.BUCKET_NAME = 'test-bucket'
+const proxyquire = require('proxyquire')
+const { S3Client } = require('@aws-sdk/client-s3')
+const { mockClient } = require('aws-sdk-client-mock')
+const s3ClientMock = mockClient(S3Client)
+const { getNews } = proxyquire('../handler', {
+  S3Client: s3ClientMock
+})
 
 test('getNews', async () => {
   const mockHtml = await readFile(path.join(__dirname, '__mocks__', 'nytimes.html'))
