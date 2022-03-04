@@ -77,8 +77,19 @@ npx serverless remove
 
 ## Notes
 
+## Using S3
+
+An example using S3 is currently available [in a Pull Request](https://github.com/fourTheorem/api-gateway-sls-example/pull/1) in this repo. Tests are to be updated to use an S3 Mock client.
+
+We'll do that soon 😇
+
+
+### Scaffolding a new project 
+
 A quick way to scaffold a new Node.js project with Serverless framework is by using the following command:
 
 ```bash
 npx serverless create --template aws-nodejs --path nameOfYourService
 ```
+
+But be aware that this might not be fully up to date and it might give you a Serverless v2 project (rather than v3).
