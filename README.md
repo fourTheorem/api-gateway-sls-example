@@ -1,10 +1,13 @@
 # api-gateway-sls-example
 
+[![Node.js CI](https://github.com/fourTheorem/api-gateway-sls-example/actions/workflows/test.yml/badge.svg)](https://github.com/fourTheorem/api-gateway-sls-example/actions/workflows/test.yml)
+
+
 An example of how to build a simple API with:
 
 - API Gateway
 - Lambda
-- [The serverless framework](https://www.serverless.com/)
+- [The serverless framework](https://www.serverless.com/) (v3)
 
 Using Node.js
 
@@ -76,13 +79,6 @@ npx serverless remove
 
 
 ## Notes
-
-### Using S3
-
-An example using S3 is currently available [in a Pull Request](https://github.com/fourTheorem/api-gateway-sls-example/pull/1) in this repo. Tests are to be updated to use an S3 Mock client.
-
-We'll do that soon 😇
-
 
 ### Scaffolding a new project 
 
