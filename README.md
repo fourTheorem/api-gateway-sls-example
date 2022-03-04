@@ -32,7 +32,7 @@ npm install
 To execute the function locally, you can run:
 
 ```bash
-node_modules/.bin/sls invoke local -f getNews
+npx serverless invoke local -f getNews
 ```
 
 To run the unit tests, you can run:
@@ -47,7 +47,7 @@ npm test
 Run:
 
 ```bash
-node_modules/.bin/sls deploy
+npx serverless deploy
 ```
 
 The first deployment will take 2-3 minutes.
@@ -71,7 +71,7 @@ To see the API in action.
 To remove all the resources created by this project run:
 
 ```bash
-node_modules/.bin/sls remove
+npx serverless remove
 ```
 
 
@@ -80,5 +80,5 @@ node_modules/.bin/sls remove
 A quick way to scaffold a new Node.js project with Serverless framework is by using the following command:
 
 ```bash
-node_modules/.bin/sls create --template aws-nodejs --path nameOfYourService
+npx serverless create --template aws-nodejs --path nameOfYourService
 ```

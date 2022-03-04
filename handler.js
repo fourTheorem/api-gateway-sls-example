@@ -3,7 +3,7 @@ const cheerio = require('cheerio')
 
 module.exports.getNews = async function getNews (event) {
   // logs the event (good practice for debugging)
-  console.log(event)
+  console.log('Triggered with event', event)
 
   // fetches the HTML code of the NY Times home page
   const { data: html } = await axios.get('https://www.nytimes.com')
